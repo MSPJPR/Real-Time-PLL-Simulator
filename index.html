@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLL Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Real-Time PLL Simulator</h1>
+    <p>Modify PLL parameters and observe real-time responses.</p>
+
+    <div class="controls">
+        <label for="gain">Loop Gain (K):</label>
+        <input type="range" id="gain" min="1" max="100" value="10">
+        <span id="gainValue">10</span>
+
+        <label for="divider">Frequency Divider:</label>
+        <input type="range" id="divider" min="1" max="50" value="10">
+        <span id="dividerValue">10</span>
+
+        <label for="noise">Phase Noise Level:</label>
+        <input type="range" id="noise" min="0" max="10" value="0">
+        <span id="noiseValue">0</span>
+
+        <button onclick="resetSettings()">Reset Settings</button>
+    </div>
+
+    <canvas id="pllCanvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
